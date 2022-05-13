@@ -12,108 +12,115 @@
 </head>
 
 <body>
-  <section class="page">
-    <p>Checkout</p>
-  </section>
-  <div class="content">
-    <section class="entry">
-      <div class="contact_info">
-        <p class="check_type">Contact infomation</p>
-      </div>
-      <form action="">
-        <label for="email">E-mail</label>
-        <div>
-          <i class="fa-solid fa-envelope icon"></i>
-          <input type="email" name="email" id="email" placeholder="Enter your email...">
-        </div>
-        <label for="phone">Phone</label>
-        <div>
-          <i class="fa-solid fa-phone icon"></i>
-          <input type="tel" name="phone" id="phone" placeholder="Enter your phone number...">
-        </div>
-      </form>
-      <div class="shipping_add">
-        <p class="check_type">Shipping address</p>
-      </div>
-      <form action="">
-        <label for="name">Full name</label>
-        <div><i class="fa-solid fa-user"></i>
-          <input type="text" name="name" id="name" placeholder="Your name...">
-        </div>
-        <label for="address">Address</label>
-        <div><i class="fa-solid fa-house"></i>
-          <input type="text" name="address" id="address" placeholder="Your address...">
-        </div>
-        <label for="city">City</label>
-        <div><i class="fa-solid fa-building"></i>
-          <input type="text" name="city" id="city" placeholder="Your city...">
-        </div>
-        <div class="count-post">
-          <div class="county">
-            <label for="country">Country</label>
-            <div><i class="fa-solid fa-earth-americas"></i>
-              <select name="country" id="country" placeholder="Your country...">
-                <option value="">Your country...</option>
-              </select>
-            </div>
-          </div>
-          <div class="post-code">
-            <label for="post">Postal code</label>
-            <div><i class="fa-solid fa-map-location"></i>
-              <input type="text" name="post" id="post" placeholder="Your post...">
-            </div>
-          </div>
-        </div>
-      </form>
-      <input type="checkbox" name="save" id="save">
-      <label for="save" id="save">Save this information for next time.</label>
+  <container>
+    <section class="page">
+      <p>Checkout</p>
     </section>
 
-    <section class="checkout">
-      <div class="card_cont">
-        <div class="card">
-          <img src="photo1.png" alt="">
-          <div class="item">
-            <p class="type">Vintage Backpack</p>
-            <p class="price">$54.99 <span class="oldprice">$94.99</span></p>
-            <div class="amount">
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
+    <div class="content">
+      <section class="entry">
+        <div class="contact_info">
+          <p class="check_type">Contact infomation</p>
+        </div>
+        <form action="">
+          <label for="email">E-mail</label>
+          <div>
+            <i class="fa-solid fa-envelope icon"></i>
+            <input type="email" name="email" id="email" placeholder="Enter your email...">
+          </div>
+          <label for="phone">Phone</label>
+          <div>
+            <i class="fa-solid fa-phone icon"></i>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number...">
+          </div>
+        </form>
+        <div class="shipping_add">
+          <p class="check_type">Shipping address</p>
+        </div>
+        <form action="">
+          <label for="name">Full name</label>
+          <div><i class="fa-solid fa-user"></i>
+            <input type="text" name="name" id="name" placeholder="Your name...">
+          </div>
+          <label for="address">Address</label>
+          <div><i class="fa-solid fa-house"></i>
+            <input type="text" name="address" id="address" placeholder="Your address...">
+          </div>
+          <label for="city">City</label>
+          <div><i class="fa-solid fa-building"></i>
+            <input type="text" name="city" id="city" placeholder="Your city...">
+          </div>
+          <div class="count-post">
+            <div class="county">
+              <label for="country">Country</label>
+              <div><i class="fa-solid fa-earth-americas"></i>
+                <select name="country" id="country" placeholder="Your country...">
+                  <option value="">Your country...</option>
+                </select>
+              </div>
+            </div>
+            <div class="post-code">
+              <label for="post">Postal code</label>
+              <div><i class="fa-solid fa-map-location"></i>
+                <input type="text" name="post" id="post" placeholder="Your post...">
+              </div>
+            </div>
+          </div>
+        </form>
+        <input type="checkbox" name="save" id="save">
+        <label for="save" id="save">Save this information for next time.</label>
+      </section>
+
+      <section class="checkout">
+        <div class="card_cont">
+          <div class="card">
+            <img src="photo1.png" alt="">
+            <div class="item">
+              <p class="type">Vintage Backpack</p>
+              <p class="price">$54.99 <span class="oldprice">$94.99</span></p>
+              <div class="amount">
+                <button onclick="decrement()">-</button>
+                <p id="amt-el">1</p>
+                <button onclick="increment()">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="photo2.png" alt="">
+            <div class="item">
+              <p class="type">Levi Shoes</p>
+              <p class="price">$74.99 <span class="oldprice">$124.99</span></p>
+              <div class="amount">
+                <button onclick="decrement()">-</button>
+                <p id="amt-el">1</p>
+                <button onclick="increment()">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="chkout">
+            <hr class="breakln">
+            <div class="chkout_sum">
+              <p class="type">Shipping</p>
+              <p class="price">$19</p>
+            </div>
+            <hr>
+            <div class="chkout_sum">
+              <p class="type">Total</p>
+              <p class="price">$148.98</p>
             </div>
           </div>
         </div>
-        <div class="card">
-          <img src="photo2.png" alt="">
-          <div class="item">
-            <p class="type">Levi Shoes</p>
-            <p class="price">$74.99 <span class="oldprice">$124.99</span></p>
-            <div class="amount">
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
-            </div>
-          </div>
-        </div>
-        <div class="chkout">
-          <hr class="breakln">
-          <div class="chkout_sum">
-            <p class="type">Shipping</p>
-            <p class="price">$19</p>
-          </div>
-          <hr>
-          <div class="chkout_sum">
-            <p class="type">Total</p>
-            <p class="price">$148.98</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="submit"><button>Continue</button></div>
+      </section>
+    </div>
+
+    <div class="submit"><button>Continue</button></div>
+  </container>
+
   <section class="footer">
     <p><a href="https://github.com/TheTobiGit">created by TheTobiGit - devChallenges.io</a></p>
   </section>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
